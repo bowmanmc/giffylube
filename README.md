@@ -22,4 +22,5 @@ exported components in an index.js in each folder.
 ## Thoughts? Questions?
 
 Let me know what you think. Especially interested in hearing what problems 
-Windows users run into.
+Windows users run into. Right now, things are kind of loose since I'm just trying
+to get things working. If you see something that could be better, let me know!
