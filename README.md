@@ -1,10 +1,10 @@
 # GiffyLube
 
-The app will allow users to apply brightness and contrast adjustments to gifs. The 
+The app will allow users to apply brightness and contrast adjustments to gifs. The
 real reason for the app is to try out some new technologies.
 
 
-## NPM as a build tool
+## NPM as a Build Tool
 
 No more bower or gulp. Simply run "npm install" and then "npm run start" to get up
 and running locally. It does everything our gulp/bower build does and more.
@@ -21,6 +21,6 @@ exported components in an index.js in each folder.
 
 ## Thoughts? Questions?
 
-Let me know what you think. Especially interested in hearing what problems 
+Let me know what you think. Especially interested in hearing what problems
 Windows users run into. Right now, things are kind of loose since I'm just trying
 to get things working. If you see something that could be better, let me know!
