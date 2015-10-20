@@ -8,6 +8,9 @@ real reason for the app is to try out some new technologies.
 
 No more bower or gulp. Simply run "npm install" and then "npm run start" to get up
 and running locally. It does everything our gulp/bower build does and more.
+More info and resources at:
+https://github.com/asimpson/npm-build-tool and
+http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
 
 
 ## ES6 and WebPack
