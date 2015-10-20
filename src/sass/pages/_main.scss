@@ -1,6 +1,8 @@
 body {
-    background: $dark;
+    background: $dark url('../images/low_contrast_linen.png');
     color: $light;
+    padding-top: 55px;
+    text-align: center;
 }
 
 a {

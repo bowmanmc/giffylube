@@ -1,0 +1,27 @@
+
+
+<img src="images/{{ options.selected.image }}" class="preview" />
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+
+            <div class="preview__ctrl-title">Brightness</div>
+            <rzslider rz-slider-model="brightness"
+                rz-slider-floor="0"
+                rz-slider-ceil="255"
+                rz-slider-always-show-bar="true"></rzslider>
+
+        </div>
+        <div class="col-sm-6">
+
+            <div class="preview__ctrl-title">Contrast</div>
+            <rzslider rz-slider-model="contrast"
+                rz-slider-floor="0"
+                rz-slider-ceil="255"
+                rz-slider-always-show-bar="true"></rzslider>
+
+        </div>
+    </div>
+</div>

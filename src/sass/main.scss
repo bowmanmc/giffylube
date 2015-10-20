@@ -1,11 +1,11 @@
 @charset 'utf-8';
 
 // Libraries
-//@import 'font-awesome';
-//@import 'bootstrap/bootstrap';
 @import 'bootstrap';
-
+@import 'rzslider';
 
 @import 'defaults/colors',
+        'defaults/tags',
+        'components/navbar',
         'pages/main'
 ;
