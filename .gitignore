@@ -9,3 +9,6 @@ reports
 .tmp
 .sass-cache
 .DS_Store
+
+src/scripts/*
+src/styles/*
