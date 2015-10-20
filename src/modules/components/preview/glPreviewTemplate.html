@@ -1,26 +1,29 @@
 
 
-<img src="images/{{ options.selected.image }}" class="preview" />
-
+<img src="images/{{ options.selected.image }}" class="preview" style="{{ filter }}"/>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">
 
             <div class="preview__ctrl-title">Brightness</div>
-            <rzslider rz-slider-model="brightness"
-                rz-slider-floor="0"
-                rz-slider-ceil="255"
-                rz-slider-always-show-bar="true"></rzslider>
+            <select name="brightnessSelect"
+                ng-options="option for option in opts"
+                ng-model="brightness">
+            </select>
 
         </div>
         <div class="col-sm-6">
 
             <div class="preview__ctrl-title">Contrast</div>
-            <rzslider rz-slider-model="contrast"
+            <select name="contrastSelect"
+                ng-options="option for option in opts"
+                ng-model="contrast">
+            </select>
+            <!-- rzslider rz-slider-model="contrast"
                 rz-slider-floor="0"
-                rz-slider-ceil="255"
-                rz-slider-always-show-bar="true"></rzslider>
+                rz-slider-ceil="50"
+                rz-slider-always-show-bar="true"></rzslider -->
 
         </div>
     </div>
