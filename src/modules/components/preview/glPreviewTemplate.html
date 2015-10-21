@@ -4,27 +4,29 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6">
 
+        <div class="col-sm-6">
             <div class="preview__ctrl-title">Brightness</div>
-            <select name="brightnessSelect"
-                ng-options="option for option in opts"
-                ng-model="brightness">
-            </select>
-
+            <input type="text"
+                class="slider slider-brightness"
+                ng-model="brightness"
+                data-slider-min="0"
+                data-slider-max="5"
+                data-slider-step="0.05"
+                data-slider-value="1"
+                />
         </div>
+
         <div class="col-sm-6">
-
             <div class="preview__ctrl-title">Contrast</div>
-            <select name="contrastSelect"
-                ng-options="option for option in opts"
-                ng-model="contrast">
-            </select>
-            <!-- rzslider rz-slider-model="contrast"
-                rz-slider-floor="0"
-                rz-slider-ceil="50"
-                rz-slider-always-show-bar="true"></rzslider -->
-
+            <input type="text"
+                class="slider slider-contrast"
+                ng-model="contrast"
+                data-slider-min="0"
+                data-slider-max="5"
+                data-slider-step="0.05"
+                data-slider-value="1"
+                />
         </div>
     </div>
 </div>

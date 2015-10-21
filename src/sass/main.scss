@@ -2,10 +2,13 @@
 
 // Libraries
 @import 'bootstrap';
-@import 'rzslider';
+@import 'bootstrap-slider';
 
 @import 'defaults/colors',
         'defaults/tags',
+        'components/canvas',
+        'components/filedrop',
         'components/navbar',
+        //'components/preview',
         'pages/main'
 ;

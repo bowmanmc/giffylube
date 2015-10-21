@@ -1,21 +1,30 @@
 'use strict';
+var Slider = require('bootstrap-slider');
 
 module.exports = function(ngModule) {
 
     ngModule.controller('glPreviewController', function($scope, glOptionService) {
 
+        var update = function(filter, val) {
+            $scope[filter] = val;
+            if(!$scope.$$phase) {
+                $scope.$apply();
+            }
+        };
+
         var initialize = function() {
             console.log('glPreviewController initializing...');
 
             $scope.options = glOptionService;
-            $scope.brightness = 1.0;
-            $scope.contrast = 1.0;
+            $scope.brightness = 1;
+            $scope.contrast = 1;
 
-            $scope.opts = [
-                0.10, 0.25, 0.50, 0.75,
-                1.0, 1.5, 2.0, 3.0, 5.0,
-                10.0, 20.0, 50.0
-            ];
+            new Slider('.slider-brightness').on('slide', function(val) {
+                update('brightness', val);
+            });
+            new Slider('.slider-contrast').on('slide', function(val) {
+                update('contrast', val);
+            });
 
             $scope.$watch('contrast', function() {
                 $scope.filter = `-webkit-filter: contrast(${$scope.contrast}) brightness(${$scope.brightness});`;

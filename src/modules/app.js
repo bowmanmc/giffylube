@@ -11,15 +11,13 @@ import ngResource from 'angular-resource';
 import ngRoute from 'angular-route';
 import ngSanitize from 'angular-sanitize';
 
-import rzModule from 'angularjs-slider';
 
 // Application
 var app = angular.module('gl', [
     ngCookies,
     ngResource,
     ngRoute,
-    ngSanitize,
-    'rzModule'
+    ngSanitize
 ]);
 
 // Load Application Components

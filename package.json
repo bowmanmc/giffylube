@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf 'src/styles/*' 'src/scripts/*'",
     "js": "webpack -d --progress --colors",
-    "sass": "node-sass --include-path src/sass --include-path node_modules/bootstrap-sass/assets/stylesheets --include-path node_modules/angularjs-slider/dist src/sass/main.scss src/styles/site.css",
+    "sass": "node-sass --include-path src/sass --include-path node_modules/bootstrap-sass/assets/stylesheets --include-path node_modules/bootstrap-slider/dist/css src/sass/main.scss src/styles/site.css",
     "postsass": "postcss -r -c postcss.config.json src/styles/site.css && cssmin src/styles/site.css > src/styles/site.min.css",
     "start": "npm run clean && npm run js && parallelshell 'browser-sync start --config bs-config.js' 'npm run watch'",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,8 +21,8 @@
     "angular-resource": "^1.4.7",
     "angular-route": "^1.4.7",
     "angular-sanitize": "^1.4.7",
-    "angularjs-slider": "^1.0.0",
     "bootstrap-sass": "^3.3.5",
+    "bootstrap-slider": "^5.2.3",
     "jquery": "^2.1.4"
   },
   "devDependencies": {
@@ -36,6 +36,7 @@
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.2.0",
     "rimraf": "^2.4.3",
+    "script-loader": "^0.6.1",
     "webpack": "^1.12.2"
   }
 }

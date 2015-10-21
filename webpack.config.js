@@ -27,6 +27,7 @@ module.exports = {
         alias: {
             jquery: NODE_MODULES + '/jquery/dist/jquery.js',
             bootstrap: NODE_MODULES + '/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+            //slider: NODE_MODULES + '/bootstrap-slider/dist/bootstrap-slider.min.js'
         }
     }
 };
