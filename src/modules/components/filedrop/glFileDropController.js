@@ -21,11 +21,39 @@ module.exports = function(ngModule) {
             return processDragEvent(event, false);
         };
 
+        var handleDrop = function(event) {
+            if (event !== null) {
+                event.preventDefault();
+            }
+
+            var reader = new FileReader();
+            reader.onload = function(evt) {
+                $scope.file = evt.target.result;
+                if(!$scope.$$phase) {
+                    $scope.$apply();
+                }
+            };
+            var file = event.dataTransfer.files[0];
+            reader.readAsDataURL(file);
+            $scope.info = {
+                'file': file,
+                'name': file.name,
+                'type': file.type,
+                'size': file.size
+            };
+
+            if(!$scope.$$phase) {
+                $scope.$apply();
+            }
+            return false;
+        };
+
         var initialize = function() {
             $scope.isOver = false;
             console.log('glFileDropController initializing...');
             $element.bind('dragover', handleDragOver);
             $element.bind('dragleave', handleDragLeave);
+            $element.bind('drop', handleDrop);
         };
 
         initialize();

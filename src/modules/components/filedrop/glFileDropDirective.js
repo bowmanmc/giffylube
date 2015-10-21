@@ -6,7 +6,11 @@ module.exports = function(ngModule) {
         return {
             restrict: 'E',
             templateUrl: 'modules/components/filedrop/glFileDropTemplate.html',
-            controller: 'glFileDropController'
+            controller: 'glFileDropController',
+            scope: {
+                file: '=',
+                info: '='
+            }
         };
     });
 };
