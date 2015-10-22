@@ -1,3 +1,13 @@
+<div class="mainpage">
+    <div class="mainpage__droparea" ng-hide="image">
+        <gl-file-drop file="image" info="imageInfo" ></gl-file-drop>
+    </div>
 
-<!-- gl-preview></gl-preview -->
-<gl-canvas></gl-canvas>
+    <div class="mainpage__preview" ng-show="image">
+        <img src="{{ image }}" />
+    </div>
+
+    <div class="mainpage__toolbar" ng-show="image">
+        <gl-toolbar file="image" info="imageInfo" ng-show="image"></gl-toolbar>
+    </div>
+</div><!-- mainpage -->

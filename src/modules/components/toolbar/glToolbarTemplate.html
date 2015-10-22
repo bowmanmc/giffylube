@@ -1,0 +1,55 @@
+
+<div class="toolbar">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-xs-3">
+                <a class="btn-link" ng-click="toggleLayerUiVisibility()">
+                    <i class="glyphicon glyphicon-list"></i>
+                </a>
+            </div>
+
+            <div class="col-xs-6 center">
+                {{ info.name }}
+            </div>
+
+            <div class="col-xs-3 right">
+                <a ng-click="closeImage()"><i class="glyphicon glyphicon-remove"></i></a>
+            </div>
+
+        </div>
+        <div class="row" ng-show="layerUiVisible">
+            <div class="col-xs-12">
+                <div class="layers__list">
+                    <div class="layer__effect">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <div class="layer__grabber">
+                                        <i class="glyphicon glyphicon-option-vertical layer__dots"></i>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 layer__toggles">
+                                    <a><i class="glyphicon glyphicon-eye-open"></i></a>
+                                    <a><i class="glyphicon glyphicon-cog"></i></a>
+                                </div>
+                                <div class="col-xs-9">
+                                    <select class="form-control" ng-model="selectedEffect">
+                                        <option ng-repeat="effect in availableEffects" value="effect.id">{{ effect.name }}</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layers__toolbar">
+                    <button class="btn btn-default pull-right">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

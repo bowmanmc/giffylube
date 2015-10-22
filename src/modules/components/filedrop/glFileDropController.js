@@ -36,11 +36,11 @@ module.exports = function(ngModule) {
             var file = event.dataTransfer.files[0];
             reader.readAsDataURL(file);
             $scope.info = {
-                'file': file,
                 'name': file.name,
                 'type': file.type,
                 'size': file.size
             };
+            console.log('Image info: ' + JSON.stringify($scope.info));
 
             if(!$scope.$$phase) {
                 $scope.$apply();

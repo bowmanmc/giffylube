@@ -1,5 +1,18 @@
 
-ng-view, gl-canvas {
+.mainpage {
+    align-items: center;
+    display: flex;
     height: 100%;
-    min-height: 100%;
+    justify-content: center;
+}
+
+.mainpage__droparea {
+    margin: auto;
+    min-height: 90%;
+    height: 90%;
+    width: 90%;
+}
+
+.mainpage__preview img {
+    box-shadow: 0 0 1em #000;
 }
