@@ -1,0 +1,36 @@
+<div class="layer__effect">
+    <div class="container-fluid">
+        <div class="row" ng-hide="effect">
+            <div class="col-xs-10">
+                <select class="form-control" ng-model="selectedEffect" ng-change="selectEffect(option)">
+                    <option ng-repeat="effect in effectService.availableEffects" ng-value="effect.id">{{ effect.name }}</option>
+                </select>
+            </div>
+            <div class="col-xs-1 right">
+                <a ng-click="removeEffect()"><i class="glyphicon glyphicon-remove-sign"></i></a>
+            </div>
+        </div>
+        <div class="row" ng-show="effect">
+            <div class="col-xs-1">
+                <div class="layer__grabber">
+                    <i class="glyphicon glyphicon-option-vertical layer__dots"></i>
+                </div>
+            </div>
+            <div class="col-xs-2 layer__toggles">
+                <a><i class="glyphicon glyphicon-eye-open"></i></a>
+                <a><i class="glyphicon glyphicon-cog"></i></a>
+            </div>
+            <div class="col-xs-2">
+                {{ effect.name }}
+            </div>
+            <div class="col-xs-6">
+                <input type="text"
+                    class="slider"
+                    ng-model="effect.val" />
+            </div>
+            <div class="col-xs-1 right">
+                <a ng-click="removeEffect()"><i class="glyphicon glyphicon-remove-sign"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
