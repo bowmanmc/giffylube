@@ -4,6 +4,8 @@ module.exports = function(ngModule) {
 
     ngModule.service('glEffectService', function() {
 
+        this.filters = '';
+
         this.availableEffects = [{
             'id': 'brightness',
             'name': 'Brightness',
@@ -64,6 +66,10 @@ module.exports = function(ngModule) {
 
         this.getEffect = function(effectId) {
             return this.availableEffects.find(effect => effect.id === effectId);
+        };
+
+        this.updateFilters = function(brightness, contrast) {
+            this.filters = `-webkit-filter: contrast(${contrast}) brightness(${brightness});`;
         };
     });
 };
