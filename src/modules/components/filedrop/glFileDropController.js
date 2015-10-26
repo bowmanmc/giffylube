@@ -25,6 +25,7 @@ module.exports = function(ngModule) {
             if (event !== null) {
                 event.preventDefault();
             }
+            $scope.isOver = false;
 
             var reader = new FileReader();
             reader.onload = function(evt) {

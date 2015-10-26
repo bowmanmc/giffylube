@@ -7,6 +7,11 @@ module.exports = function(ngModule) {
         $scope.image = null;
         $scope.imageInfo = null;
 
+        $scope.closeImage = function() {
+            $scope.image = null;
+            $scope.imageInfo = null;
+        };
+
         var initialize = function() {
             console.log('glMainPageController initializing...');
             $scope.effects = glEffectService;

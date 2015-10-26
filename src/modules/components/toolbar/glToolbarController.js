@@ -9,6 +9,19 @@ module.exports = function(ngModule) {
         $scope.brightness = 1;
         $scope.contrast = 1;
 
+        $scope.closeImage = function() {
+            $scope.$parent.closeImage();
+            resetValues();
+        };
+
+        var resetValues = function() {
+            $scope.brightness = 1;
+            $scope.contrast = 1;
+            $scope.sliderBrightness.setValue(1);
+            $scope.sliderContrast.setValue(1);
+            glEffectService.updateFilters($scope.brightness, $scope.contrast);
+        };
+
         var updateValues = function() {
             glEffectService.updateFilters($scope.brightness, $scope.contrast);
             if(!$scope.$$phase) {
@@ -18,7 +31,7 @@ module.exports = function(ngModule) {
 
         var initialize = function() {
 
-            new Slider('#slider-brightness', {
+            $scope.sliderBrightness = new Slider('#slider-brightness', {
                 min: 0,
                 max: 5,
                 step: 0.05,
@@ -28,7 +41,7 @@ module.exports = function(ngModule) {
                 updateValues();
             });
 
-            new Slider('#slider-contrast', {
+            $scope.sliderContrast = new Slider('#slider-contrast', {
                 min: 0,
                 max: 5,
                 step: 0.05,
@@ -37,6 +50,7 @@ module.exports = function(ngModule) {
                 $scope.contrast = val;
                 updateValues();
             });
+            resetValues();
         };
         initialize();
 
